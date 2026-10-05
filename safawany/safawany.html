@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مطعم الصفواني - أشهى المأكولات العربية الأصيلة، اطلب الآن أو تواصل معنا عبر واتساب">
+
+    <title>مطعم الصفواني | أشهى المأكولات</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- INTRO -->
+    <div id="introScreen">
+        <video id="introVideo" autoplay muted playsinline>
+            <source src="intro.mp4" type="video/mp4">
+        </video>
+        <button class="skip-intro-btn" onclick="hideIntro()">تخطي &raquo;</button>
+    </div>
+
+    <!-- NAV -->
+    <nav class="navbar">
+        <div class="logo">
+    <img src="logo__1_-removebg-preview.png" alt="مطعم الصفواني" class="logo-img">
+</div>
+        <ul>
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#menu">القائمة</a></li>
+            <li><a href="#reviews">التقييمات</a></li>
+            <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+        <button id="themeToggleBtn" class="theme-toggle" aria-label="تبديل الوضع الليلي">
+    <i class="fa-solid fa-moon"></i>
+</button>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <img
+            class="banner"
+            src="resturant.jpeg"
+            alt="أطباق مطعم الصفواني"
+        >
+        <div class="hero-overlay">
+            <span class="hero-badge">مطعم عربي أصيل &middot; تأسس عام 1969</span>
+            <h1>مطعم الصفواني</h1>
+            <p>نكهات عربية أصيلة، تُقدَّم بشغف في كل طبق</p>
+            <button class="outline hero-cta" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">
+                استعرض القائمة
+            </button>
+        </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="menu-section" id="menu">
+        <div class="section-title">
+            <h2>قائمتنا</h2>
+            <p>اختر من تشكيلتنا المتنوعة وأضف طلبك مباشرة إلى السلة</p>
+        </div>
+
+        <div class="types">
+
+            <div class="food">
+                <img src="images (33).jpeg" alt="الطيور">
+                <div class="food-content">
+                    <h2>الطيور</h2>
+                    <button type="button" data-open-category="tuyoor">اعرض الكل</button>
+                </div>
+            </div>
+
+            <div class="food">
+                <img src="images (34).jpeg" alt="المحاشي">
+                <div class="food-content">
+                    <h2>المحاشي</h2>
+                    <button type="button" data-open-category="mahashi">اعرض الكل</button>
+                </div>
+            </div>
+
+            <div class="food">
+                <img src="file_00000000340c81f9b2433f00347bb738.png" alt="طواجن">
+                <div class="food-content">
+                    <h2>طواجن</h2>
+                    <button type="button" data-open-category="tawajen">اعرض الكل</button>
+                </div>
+            </div>
+
+            <div class="food">
+                <img src="images (37).jpeg" alt="المكرونة">
+                <div class="food-content">
+                    <h2>المكرونة</h2>
+                    <button type="button" data-open-category="makarona">اعرض الكل</button>
+                </div>
+            </div>
+
+            <div class="food">
+                <img src="chicken salad.jpeg" alt="السلطات">
+                <div class="food-content">
+                    <h2>السلطات</h2>
+                    <button type="button" data-open-category="salatat">اعرض الكل</button>
+                </div>
+            </div>
+
+            <div class="food">
+                <img src="fries.jpeg" alt="المقبلات">
+                <div class="food-content">
+                    <h2>المقبلات</h2>
+                    <button type="button" data-open-category="muqabbilat">اعرض الكل</button>
+                </div>
+            </div>
+
+            <div class="food">
+                <img src="drinks.jpeg" alt="مشروبات غازية">
+                <div class="food-content">
+                    <h2>مشروبات غازية</h2>
+                    <button type="button" data-open-category="mashroubat">اعرض الكل</button>
+                </div>
+            </div>
+
+            <div class="food">
+                <img src="mashawyat.jpeg" alt="أطباق طيور">
+                <div class="food-content">
+                    <h2>أطباق طيور</h2>
+                    <button type="button" data-open-category="atbaq-tuyoor">اعرض الكل</button>
+                </div>
+            </div>
+
+            <div class="food">
+                <img src="meat.jpeg" alt="أطباق اللحوم">
+                <div class="food-content">
+                    <h2>أطباق اللحوم</h2>
+                    <button type="button" data-open-category="atbaq-lohoom">اعرض الكل</button>
+                </div>
+            </div>
+
+            <div class="food">
+                <img src="sawany.jpeg" alt="المشويات">
+                <div class="food-content">
+                    <h2>المشويات</h2>
+                    <button type="button" data-open-category="mashawi">اعرض الكل</button>
+                </div>
+            </div>
+
+            <div class="food">
+                <img src="soap.jpeg" alt="الشوربة">
+                <div class="food-content">
+                    <h2>الشوربة</h2>
+                    <button type="button" data-open-category="shorba">اعرض الكل</button>
+                </div>
+            </div>
+
+            <div class="food">
+                <img src="sawany2.jpeg" alt="صواني الصفواني">
+                <div class="food-content">
+                    <h2>صواني الصفواني</h2>
+                    <button type="button" data-open-category="sawani">اعرض الكل</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews-section" id="reviews">
+        <div class="reviews-header">
+            <h2>آراء عملائنا</h2>
+            <p>سعداء دائمًا بسماع رأيكم</p>
+        </div>
+
+        <div class="reviews-container">
+            <div class="rating-summary">
+                <div class="average-rating" id="averageRating">0.0</div>
+                <div class="stars" id="averageStars">☆☆☆☆☆</div>
+                <p id="reviewCount">لا توجد تقييمات بعد</p>
+            </div>
+
+            <div class="review-form">
+                <h3>أضف تقييمك</h3>
+                <form id="reviewForm">
+                    <input type="text" id="reviewName" placeholder="الاسم" required>
+                    <div class="rating-input" id="ratingInput">
+                        <span data-value="5">&#9733;</span>
+                        <span data-value="4">&#9733;</span>
+                        <span data-value="3">&#9733;</span>
+                        <span data-value="2">&#9733;</span>
+                        <span data-value="1">&#9733;</span>
+                    </div>
+                    <textarea id="reviewText" placeholder="اكتب تجربتك معنا..." required></textarea>
+                    <button type="submit">إرسال التقييم</button>
+                    <p class="review-message" id="reviewMessage"></p>
+                </form>
+            </div>
+        </div>
+
+        <div class="reviews-list" id="reviewsList"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+        <div class="contact-header">
+            <h2>تواصل معنا</h2>
+            <p>يسعدنا استقبال طلباتكم واستفساراتكم في أي وقت</p>
+        </div>
+
+        <div class="contact-box">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div>
+                        <h3>فرع سموحة</h3>
+                        <p>السوق التجاري الجديد، بجوار مسجد حاتم</p>
+                        <a href="tel:+20342286436">034286436</a>
+                        <a href="tel:+20342211811">034211811</a>
+                        <a href="tel:+20342255315">034255315</a>
+                    </div>
+                </div>
+               
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fa-brands fa-facebook"></i></div>
+                    <div>
+                        <h3>فيسبوك</h3>
+                        <a href="https://facebook.com/SafwanyRestaurant" target="_blank" rel="noopener">SafwanyRestaurant/</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
+                    <div>
+                        <h3>ساعات العمل</h3>
+                        <p>يوميًا من 12 ظهرًا حتى 1 فجرًا</p>
+                        <p style="font-size:13px; color:#999; margin-top:6px;">أكل مصري أصيل &middot; تأسست عام 1969 &middot; الأسعار شاملة ضريبة القيمة المضافة</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="whatsapp-box">
+                <div class="whatsapp-large"><i class="fa-brands fa-whatsapp"></i></div>
+                <h3>اطلب عبر واتساب</h3>
+                <p>أرسل طلبك مباشرة وسنقوم بتجهيزه فورًا</p>
+                <a
+                    class="whatsapp-button"
+                    id="whatsappContact"
+                    href="https://wa.me/201017570005?text=From%20the%20website"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <i class="fa-brands fa-whatsapp"></i> تواصل الآن
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CART BUTTON -->
+    <button class="cart-button" id="cartButton" aria-label="السلة">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-count" id="cartCount">0</span>
+    </button>
+
+    <!-- MENU POPUP (category items) -->
+    <div class="menu-popup" id="menuPopup">
+        <div class="menu-window">
+            <button class="close-menu" data-close="menuPopup">&times;</button>
+            <h2 id="menuTitle"></h2>
+            <div class="menu-items-list" id="menuItems"></div>
+        </div>
+    </div>
+
+    <!-- CART POPUP -->
+    <div class="menu-popup" id="cartPopup">
+        <div class="menu-window">
+            <button class="close-menu" data-close="cartPopup">&times;</button>
+            <h2 id="cartTitle">سلة الطلبات</h2>
+            <div id="cartItems"></div>
+            <div id="cartTotal"></div>
+
+            <div class="order-details">
+                <label for="customerName">الاسم *</label>
+                <input type="text" id="customerName" placeholder="اسمك بالكامل">
+
+                <label for="customerPhone">رقم التواصل *</label>
+                <input type="tel" id="customerPhone" placeholder="مثال: 01017570005">
+
+                <label for="deliveryAddress">عنوان التوصيل بالتفصيل *</label>
+                <textarea
+                    id="deliveryAddress"
+                    placeholder="المدينة، الحي، اسم الشارع، رقم المبنى، وأقرب علامة مميزة"
+                ></textarea>
+
+                <p class="review-message" id="orderMessage"></p>
+            </div>
+
+            <button
+                type="button"
+                id="checkoutOrderBtn"
+                class="whatsapp-button"
+                style="justify-content:center; width:100%; box-sizing:border-box;"
+            >
+                <i class="fa-brands fa-whatsapp"></i> إتمام الطلب عبر واتساب
+            </button>
+        </div>
+    </div>
+
+    <footer>
+        <h3>مطعم الصفواني</h3>
+        <p>نكهات أصيلة تجمعكم حول مائدة واحدة</p>
+        <div class="developer-credit">
+            تصميم وتطوير <span>فريق الصفواني الرقمي</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="safawany.js"></script>
+</body>
+
+</html>
